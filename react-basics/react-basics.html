@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>React Basics</title> <!--React is external library-->
+  </head>
+  <body>
+    <div class="js-container"></div>
+
+    <script src="react-basics.js"> //loads our custom JavaScript file
+    //script src="https://unpkg.com/supersimpledev@8.6.4/external-library.js"> //and with this option 
+    // we can load any js code from anywhere on the internet
+    //code is that outside of our computer, that someone else wrote, so react is basically that
+    
+        
+    </script>
+
+    <script src="https://unpkg.com/supersimpledev/react.js"></script>
+    <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+
+    <script src="https://unpkg.com/supersimpledev/babel.js"></script><!--Babel is javacript compiler translates other languages into js-->
+    <!-- JSX is Javascript XML same as JS but we can write HTml directly in our JS CODE-->
+     <!--   Babel translates so our browser understands it cus it only understands JS-->
+    <script type="text/babel"> //translate all this code into javascript so browser understands it
+        const button= <button>Hello</button>; //JSX code for button element
+        const paragraph=<p>paragraph of text </p>;
+
+        const div=( //( odvojimo sta je html a {} je js unutar html-a)
+            <div>
+              <button>Hello</button>
+              <p>paragraph of text {2+2}</p> 
+            </div>
+        );
+      const container = document.querySelector('.js-container'); //we are taking html element from the website and putting it in javascript
+      //DOM-DOCUMENT OBJEST MODEL-represents the page so that programs can change the document structure, style, and content
+      //. we are looking for a class which is .js-container , takes that element and puts it on javascript
+      ReactDOM.createRoot(container).render(div);//you cant give render multiple elements unless you use div
+      //sets up react, container element reacts as a contain so everthing inside that container is managed by react from
+      //here on we can use react features inside that container like .render() method, render means to display something inside the element
+      //meaning inside container or <div>=class "js-container"</div>
+      //so in div class js-container we will see "Welcome to SuperSimpleDev React Course"!!!!!
+    </script>
+  </body>
+</html>
