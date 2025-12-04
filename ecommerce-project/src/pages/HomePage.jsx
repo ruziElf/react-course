@@ -1,11 +1,12 @@
+import axios from 'axios';
 import { Header } from '../components/header.jsx';
 import { products } from '../../starting-code/data/products.js';
 import './HomePage.css';
-import { data } from 'react-router';
+
 export function HomePage() {
-  fetch('http://localhost:3000/api/products')
+  axios.get('http://localhost:3000/api/products')
     .then((response)=>{
-      return response.json()
+      console.log(response.data)
 
       }).then((data)=>{
         console.log(data);
